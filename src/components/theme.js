@@ -29,7 +29,22 @@ const mainTheme = {
 
     startButtonBgColor: colors.mineShaft,
     startButtonTextColor: colors.mineShaft,
-    startButtonTextHoverColor: colors.cararra
+    startButtonTextHoverColor: colors.cararra,
+
+    headerBgColor: colors.yellowOrange,
+    stageBgColor: colors.cararra,
+    playerBgColor: colors.yellowOrange,
+    keyboardBgColor: colors.elm
+  },
+
+  mixins: {
+    flexAlign: () => {
+      return `
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      `
+    }
   }
 }
 

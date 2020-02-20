@@ -8,19 +8,19 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body {
-    width: 100vw;
-    height: 100vh;
+  html, body, #root {
+    width: 100%;
+    height: 100%;
   }
 
   body {
     font: normal normal 100%/1.5 ${props => props.theme.fonts.base};
-    background-color: ${props => props.theme.colors.mainBgColor};
+    background-color: ${({ theme }) => theme.colors.mainBgColor};
     ${radialGradient({
       colorStops: ['#FFD07A 0%', '#FFBC42 90%'],
       extent: '50% 50% at 50% 50%'
     })}
-    color: ${props => props.theme.colors.mainTextColor};
+    color: ${({ theme }) => theme.colors.mainTextColor};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     display: flex;
@@ -30,6 +30,8 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const Container = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

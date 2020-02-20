@@ -2,16 +2,16 @@ import styled, { css, keyframes } from 'styled-components'
 import { rgba } from 'polished'
 
 export const Title = styled.h1`
-  font-family: ${props => props.theme.fonts.styled};
-  font-size: ${props => (props.type === 'intro' ? '6rem' : '1.5rem')};
+  font-family: ${({ theme }) => theme.fonts.styled};
+  font-size: ${({ type }) => (type === 'intro' ? '6rem' : '1.5rem')};
   text-align: center;
-  color: ${props => props.theme.colors.titleBaseColor};
+  color: ${({ theme }) => theme.colors.titleBaseColor};
   text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-  letter-spacing: ${props =>
-    props.type === 'intro' ? '0.3125rem' : '0.125rem'};
+  letter-spacing: ${({ type }) =>
+    type === 'intro' ? '0.3125rem' : '0.125rem'};
 
-  ${props =>
-    props.type === 'intro' &&
+  ${({ type }) =>
+    type === 'intro' &&
     css`
       line-height: 1.2;
       transform: rotate(-13deg);
@@ -20,30 +20,30 @@ export const Title = styled.h1`
 `
 
 export const SpanFirstLetter = styled.span`
-  color: ${props => props.theme.colors.titleFirstLetter};
+  color: ${({ theme }) => theme.colors.titleFirstLetter};
 `
 
 export const SpanSecondLetter = styled.span`
-  color: ${props => props.theme.colors.titleSecondLetter};
+  color: ${({ theme }) => theme.colors.titleSecondLetter};
 `
 
 export const SpanThirdLetter = styled.span`
-  color: ${props => props.theme.colors.titleThirdLetter};
+  color: ${({ theme }) => theme.colors.titleThirdLetter};
 `
 
 export const SpanPhrase = styled.span`
-  display: ${props => (props.type === 'intro' ? 'block' : 'inline-block')};
-  font-size: ${props => (props.type === 'intro' ? '2.5rem' : '1.5rem')};
+  display: ${({ type }) => (type === 'intro' ? 'block' : 'inline-block')};
+  font-size: ${({ type }) => (type === 'intro' ? '2.5rem' : '1.5rem')};
   font-weight: normal;
-  margin-left: ${props => (props.type === 'intro' ? '0' : '0.4375rem')};
+  margin-left: ${({ type }) => (type === 'intro' ? '0' : '0.4375rem')};
   letter-spacing: 0;
 `
 
 export const StartButton = styled.button`
   font-size: 1rem;
-  color: ${props => props.theme.colors.startButtonTextColor};
-  background-color: ${props =>
-    rgba(props.theme.colors.startButtonBgColor, 0.2)};
+  color: ${({ theme }) => theme.colors.startButtonTextColor};
+  background-color: ${({ theme }) =>
+    rgba(theme.colors.startButtonBgColor, 0.2)};
   border: 0;
   border-radius: 0.625rem;
   padding: 0.75rem 0.625rem;
@@ -53,9 +53,9 @@ export const StartButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    color: ${props => props.theme.colors.startButtonTextHoverColor};
-    background-color: ${props =>
-      rgba(props.theme.colors.startButtonBgColor, 0.7)};
+    color: ${({ theme }) => theme.colors.startButtonTextHoverColor};
+    background-color: ${({ theme }) =>
+      rgba(theme.colors.startButtonBgColor, 0.7)};
   }
 `
 

@@ -5,6 +5,7 @@ import { GlobalStyle, Container } from './styles'
 import mainTheme from './theme'
 
 import IntroScreen from './IntroScreen'
+import App from './App'
 
 export default function AbcForKids() {
   const [started, setStarted] = useState(false)
@@ -18,7 +19,7 @@ export default function AbcForKids() {
       <>
         <Container>
           {!started && <IntroScreen startApp={startApp} />}
-          {started && <p>App started</p>}
+          {started && <App />}
         </Container>
         <GlobalStyle />
       </>
