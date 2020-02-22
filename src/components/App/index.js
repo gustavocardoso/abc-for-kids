@@ -1,14 +1,17 @@
 import React from 'react'
 
-import { Container, Header, Stage, Player, Keyboard } from './styles'
+import Logo from '../Shared/logo'
+import { Container, Header, Stage, Separator, Keyboard } from './styles'
 
 export default function App() {
   return (
     <>
       <Container>
-        <Header>ABC for Kids</Header>
+        <Header>
+          <Logo />
+        </Header>
         <Stage>Stage</Stage>
-        <Player>Player</Player>
+        <Separator>Player</Separator>
         <Keyboard>Keyboard</Keyboard>
       </Container>
     </>

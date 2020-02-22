@@ -1,11 +1,18 @@
 const colors = {
   camelot: '#8F2D56',
-  cararra: '#ECEBE4',
+  pampas: '#F2F1EB',
   elm: '#218380',
   mineShaft: '#222',
   razzmatazz: '#D81159',
   renoSand: '#9B6A11',
   yellowOrange: '#FFBC42'
+}
+
+const colorPalette = {
+  light: colors.pampas,
+  dark: colors.mineShaft,
+  primary: colors.elm,
+  highlight: colors.yellowOrange
 }
 
 const mainTheme = {
@@ -19,22 +26,22 @@ const mainTheme = {
   },
 
   colors: {
-    mainBgColor: colors.yellowOrange,
-    mainTextColor: colors.mineShaft,
+    mainBgColor: colorPalette.highlight,
+    mainTextColor: colorPalette.dark,
 
-    titleBaseColor: colors.cararra,
+    titleBaseColor: colorPalette.light,
     titleFirstLetter: colors.razzmatazz,
     titleSecondLetter: colors.camelot,
     titleThirdLetter: colors.elm,
 
-    startButtonBgColor: colors.mineShaft,
-    startButtonTextColor: colors.mineShaft,
-    startButtonTextHoverColor: colors.cararra,
+    startButtonBgColor: colorPalette.dark,
+    startButtonTextColor: colorPalette.dark,
+    startButtonTextHoverColor: colorPalette.light,
 
-    headerBgColor: colors.yellowOrange,
-    stageBgColor: colors.cararra,
-    playerBgColor: colors.yellowOrange,
-    keyboardBgColor: colors.elm
+    headerBgColor: colorPalette.highlight,
+    stageBgColor: colorPalette.light,
+    separatorBgColor: colorPalette.highlight,
+    keyboardBgColor: colorPalette.primary
   },
 
   mixins: {
