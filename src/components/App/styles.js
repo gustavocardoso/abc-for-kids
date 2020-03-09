@@ -16,26 +16,10 @@ export const Header = styled.header`
     ${({ theme }) => darken(0.2, theme.colors.headerBgColor)};
 `
 
-export const Stage = styled.div`
-  ${({ theme }) => theme.mixins.flexAlign()}
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.stageBgColor};
-  border-top: 1px solid
-    ${({ theme }) => lighten(0.3, theme.colors.stageBgColor)};
-  border-bottom: 1px solid
-    ${({ theme }) => darken(0.2, theme.colors.separatorBgColor)};
-`
-
 export const Separator = styled.header`
   ${({ theme }) => theme.mixins.flexAlign()}
   width: 100%;
   background-color: ${({ theme }) => theme.colors.separatorBgColor};
   border-top: 1px solid
     ${({ theme }) => lighten(0.2, theme.colors.separatorBgColor)};
-`
-
-export const Keyboard = styled.div`
-  ${({ theme }) => theme.mixins.flexAlign()}
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.keyboardBgColor};
 `
