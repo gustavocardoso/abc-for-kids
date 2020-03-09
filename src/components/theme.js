@@ -21,7 +21,7 @@ const mainTheme = {
   },
 
   fonts: {
-    base: "'Open Sans', sans-serif;",
+    base: "'Roboto', sans-serif;",
     styled: "'Henny Penny', cursive;"
   },
 
@@ -39,15 +39,34 @@ const mainTheme = {
     startButtonTextHoverColor: colorPalette.light,
 
     headerBgColor: colorPalette.highlight,
+
     stageBgColor: colorPalette.light,
+    stageLettersTextColor: colorPalette.dark,
+    stageWordTextColor: colorPalette.primary,
+
     separatorBgColor: colorPalette.highlight,
-    keyboardBgColor: colorPalette.primary
+
+    keyboardBgColor: colorPalette.primary,
+    keyboardLetterBgColor: colorPalette.light,
+    keyboardLetterBgColorActive: colorPalette.highlight,
+    keyboardLetterTextColor: colorPalette.primary,
+    keyboardLetterTextColorActive: colorPalette.light,
+    keyboardLetterBorderColor: colorPalette.dark
   },
 
   mixins: {
     flexAlign: () => {
       return `
         display: flex;
+        justify-content: center;
+        align-items: center;
+      `
+    },
+
+    flexAlignColumn: () => {
+      return `
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       `
