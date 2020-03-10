@@ -1,105 +1,313 @@
 [
   {
-    "name": "a"
+    "character": "a",
+    "words": [
+      {
+        "word": "apple"
+      },
+      {
+        "word": "airplane"
+      }
+    ]
   },
 
   {
-    "name": "b"
+    "character": "b",
+    "words": [
+      {
+        "word": "ball"
+      },
+      {
+        "word": "butterfly"
+      }
+    ]
   },
 
   {
-    "name": "c"
+    "character": "c",
+    "words": [
+      {
+        "word": "cat"
+      },
+      {
+        "word": "car"
+      }
+    ]
   },
 
   {
-    "name": "d"
+    "character": "d",
+    "words": [
+      {
+        "word": "dad"
+      },
+      {
+        "word": "daisy"
+      }
+    ]
   },
 
   {
-    "name": "e"
+    "character": "e",
+    "words": [
+      {
+        "word": "elephant"
+      },
+      {
+        "word": "ear"
+      }
+    ]
   },
 
   {
-    "name": "f"
+    "character": "f",
+    "words": [
+      {
+        "word": "foot"
+      },
+      {
+        "word": "fish"
+      }
+    ]
   },
 
   {
-    "name": "g"
+    "character": "g",
+    "words": [
+      {
+        "word": "girl"
+      },
+      {
+        "word": "goose"
+      }
+    ]
   },
 
   {
-    "name": "h"
+    "character": "h",
+    "words": [
+      {
+        "word": "hand"
+      },
+      {
+        "word": "house"
+      }
+    ]
   },
 
   {
-    "name": "i"
+    "character": "i",
+    "words": [
+      {
+        "word": "ice-cream"
+      },
+      {
+        "word": "island"
+      }
+    ]
   },
 
   {
-    "name": "j"
+    "character": "j",
+    "words": [
+      {
+        "word": "jellyfish"
+      },
+      {
+        "word": "juice"
+      }
+    ]
   },
 
   {
-    "name": "k"
+    "character": "k",
+    "words": [
+      {
+        "word": "kangaroo"
+      },
+      {
+        "word": "king"
+      }
+    ]
   },
 
   {
-    "name": "l"
+    "character": "l",
+    "words": [
+      {
+        "word": "lemon"
+      },
+      {
+        "word": "lion"
+      }
+    ]
   },
 
   {
-    "name": "m"
+    "character": "m",
+    "words": [
+      {
+        "word": "monkey"
+      },
+      {
+        "word": "milk"
+      }
+    ]
   },
 
   {
-    "name": "n"
+    "character": "n",
+    "words": [
+      {
+        "word": "nose"
+      },
+      {
+        "word": "noodles"
+      }
+    ]
   },
 
   {
-    "name": "o"
+    "character": "o",
+    "words": [
+      {
+        "word": "olive"
+      },
+      {
+        "word": "owl"
+      }
+    ]
   },
 
   {
-    "name": "p"
+    "character": "p",
+    "words": [
+      {
+        "word": "pizza"
+      },
+      {
+        "word": "panda"
+      }
+    ]
   },
 
   {
-    "name": "q"
+    "character": "q",
+    "words": [
+      {
+        "word": "quail"
+      },
+      {
+        "word": "queen"
+      }
+    ]
   },
 
   {
-    "name": "r"
+    "character": "r",
+    "words": [
+      {
+        "word": "robot"
+      },
+      {
+        "word": "rainbow"
+      }
+    ]
   },
 
   {
-    "name": "s"
+    "character": "s",
+    "words": [
+      {
+        "word": "sad"
+      },
+      {
+        "word": "sandwich"
+      }
+    ]
   },
 
   {
-    "name": "t"
+    "character": "t",
+    "words": [
+      {
+        "word": "table"
+      },
+      {
+        "word": "tomato"
+      }
+    ]
   },
 
   {
-    "name": "u"
+    "character": "u",
+    "words": [
+      {
+        "word": "umbrella"
+      },
+      {
+        "word": "unicorn"
+      }
+    ]
   },
 
   {
-    "name": "v"
+    "character": "v",
+    "words": [
+      {
+        "word": "vase"
+      },
+      {
+        "word": "vegetable"
+      }
+    ]
   },
 
   {
-    "name": "w"
+    "character": "w",
+    "words": [
+      {
+        "word": "watermelon"
+      },
+      {
+        "word": "whale"
+      }
+    ]
   },
 
   {
-    "name": "x"
+    "character": "x",
+    "words": [
+      {
+        "word": "xylophone"
+      },
+      {
+        "word": "x-ray"
+      }
+    ]
   },
 
   {
-    "name": "y"
+    "character": "y",
+    "words": [
+      {
+        "word": "yogurt"
+      },
+      {
+        "word": "yawn"
+      }
+    ]
   },
 
   {
-    "name": "z"
+    "character": "z",
+    "words": [
+      {
+        "word": "zebra"
+      },
+      {
+        "word": "zucchini"
+      }
+    ]
   }
 ]

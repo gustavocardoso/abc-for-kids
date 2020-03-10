@@ -27,7 +27,7 @@ export default function App() {
 
   useEffect(() => {
     if (alphabet.length > 0) {
-      setLetters(alphabet.map(letter => letter.name))
+      setLetters(alphabet.map(letter => letter.character))
     }
   }, [alphabet])
 
@@ -43,7 +43,7 @@ export default function App() {
           <Logo />
         </Header>
 
-        <Stage />
+        <Stage selectedLetter={selectedLetter} />
         <Separator />
 
         {!loadingData && alphabet.length > 0 && (
