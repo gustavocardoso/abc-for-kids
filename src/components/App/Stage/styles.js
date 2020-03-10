@@ -38,6 +38,7 @@ export const Word = styled.h2`
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 0;
+  text-transform: capitalize;
   color: ${({ theme }) => theme.colors.stageWordTextColor};
   margin: 0 0 1.8rem 0;
 `

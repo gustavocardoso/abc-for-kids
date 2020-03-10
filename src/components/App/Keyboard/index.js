@@ -13,6 +13,7 @@ export default function Keyboard({
   selectedLetter,
   handleClickedButton
 }) {
+  const { character } = selectedLetter
   const handleClick = event => {
     handleClickedButton(event)
   }
@@ -23,7 +24,7 @@ export default function Keyboard({
           <LetterButton
             key={letter}
             onClick={handleClick}
-            className={selectedLetter === letter ? 'active' : 'null'}
+            className={character === letter ? 'active' : 'null'}
           >
             {letter}
           </LetterButton>

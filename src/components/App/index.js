@@ -9,7 +9,10 @@ export default function App() {
   const [alphabet, setAlphabet] = useState([])
   const [letters, setLetters] = useState([])
   const [loadingData, setLoadingData] = useState(false)
-  const [selectedLetter, setSelectedLetter] = useState('')
+  const [selectedLetter, setSelectedLetter] = useState({
+    character: '',
+    word: ''
+  })
 
   useEffect(() => {
     async function fetchAlphabet() {
@@ -33,7 +36,13 @@ export default function App() {
 
   const handleClickedButton = event => {
     const clickedLetter = event.target.innerText.toLowerCase()
-    setSelectedLetter(clickedLetter)
+    const filteredLetter = alphabet.filter(
+      letter => letter.character === clickedLetter
+    )
+    const words = filteredLetter[0].words
+    const randomWord = words[Math.floor(Math.random() * words.length)].word
+
+    setSelectedLetter({ character: clickedLetter, word: randomWord })
   }
 
   return (
