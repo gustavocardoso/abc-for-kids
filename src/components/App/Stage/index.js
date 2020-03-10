@@ -3,28 +3,27 @@ import React from 'react'
 import * as S from './styles'
 
 export default function Stage({ selectedLetter }) {
+  const { character, word } = selectedLetter
   const object = 'wolf'
   const image =
-    selectedLetter === ''
+    character === ''
       ? '/assets/images/select.svg'
       : `/assets/images/${object}.svg`
 
   return (
     <>
-      <S.Container
-        className={selectedLetter === '' ? 'noLetterSelected' : null}
-      >
-        {selectedLetter !== '' && (
+      <S.Container className={character === '' ? 'noLetterSelected' : null}>
+        {character !== '' && (
           <S.Letter>
-            <S.UpperCase>{selectedLetter.toUpperCase()}</S.UpperCase>
-            <S.LowerCase>{selectedLetter}</S.LowerCase>
+            <S.UpperCase>{character.toUpperCase()}</S.UpperCase>
+            <S.LowerCase>{character}</S.LowerCase>
           </S.Letter>
         )}
 
         <S.WordBox>
-          {selectedLetter !== '' && <S.Word>Wolf</S.Word>}
+          {character !== '' && <S.Word>{word}</S.Word>}
           <S.Icon src={image} />
-          {selectedLetter === '' && (
+          {character === '' && (
             <S.Instructions>Please, select a letter below!</S.Instructions>
           )}
         </S.WordBox>
