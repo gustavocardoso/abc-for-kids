@@ -10,6 +10,10 @@ export const Container = styled.div`
   border-bottom: 1px solid
     ${({ theme }) => darken(0.2, theme.colors.separatorBgColor)};
   padding: 0 1rem 1rem 1rem;
+
+  &.noLetterSelected {
+    padding-top: 1rem;
+  }
 `
 
 export const Letter = styled.div`
@@ -22,7 +26,9 @@ export const Letter = styled.div`
 
 export const UpperCase = styled.div``
 
-export const LowerCase = styled.div``
+export const LowerCase = styled.div`
+  margin-left: 0.2rem;
+`
 
 export const WordBox = styled.div`
   ${({ theme }) => theme.mixins.flexAlignColumn()}
@@ -39,4 +45,9 @@ export const Word = styled.h2`
 export const Icon = styled.img`
   width: 100px;
   height: 100px;
+`
+
+export const Instructions = styled.p`
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
 `
