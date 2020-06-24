@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Logo from '../Shared/Logo'
 import { StartButton } from './styles'
 
-function IntroScreen({ startApp }) {
+const IntroScreen = ({ startApp }) => {
   const handleStartApp = () => {
     startApp()
   }
@@ -29,9 +29,7 @@ function IntroScreen({ startApp }) {
   return (
     <>
       <Logo type='intro' />
-      <StartButton onClick={handleStartApp}>
-        [press here or hit "space”]
-      </StartButton>
+      <StartButton onClick={handleStartApp}>[press here or hit &apos;space&apos;]</StartButton>
     </>
   )
 }

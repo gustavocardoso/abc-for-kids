@@ -17,6 +17,6 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'space-before-function-paren': true
+    'space-before-function-paren': 0
   }
 }
