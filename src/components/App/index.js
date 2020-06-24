@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import Logo from '../Shared/Logo'
 import Stage from './Stage'
 import Keyboard from './Keyboard'
+import Player from './Player'
 import { Container, Header, Separator } from './styles'
 
-export default function App() {
+const App = () => {
   const [alphabet, setAlphabet] = useState([])
   const [letters, setLetters] = useState([])
   const [loadingData, setLoadingData] = useState(false)
@@ -13,9 +14,14 @@ export default function App() {
     character: '',
     word: ''
   })
+  const [audioLetterSrc, setAudioLetterSrc] = useState([])
+  const [audioWordSrc, setAudioWordSrc] = useState([])
+
+  const playerLetter = useRef(null)
+  const playerWord = useRef(null)
 
   useEffect(() => {
-    async function fetchAlphabet() {
+    const fetchAlphabet = async () => {
       setLoadingData(true)
 
       const response = await window.fetch('./assets/data/letters.json')
@@ -30,19 +36,42 @@ export default function App() {
 
   useEffect(() => {
     if (alphabet.length > 0) {
-      setLetters(alphabet.map(letter => letter.character))
+      setLetters(alphabet.map((letter) => letter.character))
     }
   }, [alphabet])
 
-  const handleClickedButton = event => {
+  useEffect(() => {
+    if (selectedLetter.character !== '') {
+      setAudioLetterSrc([
+        { file: `${selectedLetter.character}.mp3`, type: 'audio/mp3' },
+        { file: `${selectedLetter.character}.ogg`, type: 'audio/ogg' }
+      ])
+      setAudioWordSrc([
+        { file: `${selectedLetter.word}.mp3`, type: 'audio/mp3' },
+        { file: `${selectedLetter.word}.ogg`, type: 'audio/ogg' }
+      ])
+    }
+  }, [selectedLetter])
+
+  const handleClickedButton = (event) => {
     const clickedLetter = event.target.innerText.toLowerCase()
-    const filteredLetter = alphabet.filter(
-      letter => letter.character === clickedLetter
-    )
+    const filteredLetter = alphabet.filter((letter) => letter.character === clickedLetter)
     const words = filteredLetter[0].words
     const randomWord = words[Math.floor(Math.random() * words.length)].word
 
     setSelectedLetter({ character: clickedLetter, word: randomWord })
+  }
+
+  const handlePlayLetterButton = (event) => {
+    playerLetter.current.pause()
+    playerLetter.current.load()
+    playerLetter.current.play()
+  }
+
+  const handlePlayWordButton = (event) => {
+    playerWord.current.pause()
+    playerWord.current.load()
+    playerWord.current.play()
   }
 
   return (
@@ -55,14 +84,21 @@ export default function App() {
         <Stage selectedLetter={selectedLetter} />
         <Separator />
 
+        {selectedLetter.character !== '' && <Player folder='letters' audioSrc={audioLetterSrc} ref={playerLetter} />}
+        {selectedLetter.word !== '' && <Player folder='words' audioSrc={audioWordSrc} ref={playerWord} />}
+
         {!loadingData && alphabet.length > 0 && (
           <Keyboard
             letters={letters}
-            handleClickedButton={handleClickedButton}
             selectedLetter={selectedLetter}
+            handleClickedButton={handleClickedButton}
+            handlePlayLetterButton={handlePlayLetterButton}
+            handlePlayWordButton={handlePlayWordButton}
           />
         )}
       </Container>
     </>
   )
 }
+
+export default App

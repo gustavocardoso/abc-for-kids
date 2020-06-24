@@ -7,7 +7,7 @@ import mainTheme from './theme'
 import IntroScreen from './IntroScreen'
 import App from './App'
 
-export default function AbcForKids() {
+const AbcForKids = () => {
   const [started, setStarted] = useState(false)
 
   const startApp = () => {
@@ -26,3 +26,5 @@ export default function AbcForKids() {
     </ThemeProvider>
   )
 }
+
+export default AbcForKids

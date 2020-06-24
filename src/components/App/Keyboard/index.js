@@ -1,42 +1,45 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {
-  Container,
-  LetterButton,
-  PlaySoundButton,
-  PlayWordButton
-} from './styles'
+import { Container, LetterButton, PlaySoundButton, PlayWordButton } from './styles'
 
-export default function Keyboard({
-  letters,
-  selectedLetter,
-  handleClickedButton
-}) {
+const Keyboard = ({ letters, selectedLetter, handleClickedButton, handlePlayLetterButton, handlePlayWordButton }) => {
   const { character } = selectedLetter
-  const handleClick = event => {
+
+  const handleClick = (event) => {
     handleClickedButton(event)
   }
+
+  const handlePlayLetterClick = (event) => {
+    handlePlayLetterButton()
+  }
+
+  const handlePlayWordClick = (event) => {
+    handlePlayWordButton()
+  }
+
   return (
     <>
       <Container>
-        {letters.map(letter => (
-          <LetterButton
-            key={letter}
-            onClick={handleClick}
-            className={character === letter ? 'active' : 'null'}
-          >
+        {letters.map((letter) => (
+          <LetterButton key={letter} onClick={handleClick} className={character === letter ? 'active' : 'null'}>
             {letter}
           </LetterButton>
         ))}
 
-        <PlaySoundButton>ss</PlaySoundButton>
-        <PlayWordButton>ww</PlayWordButton>
+        <PlaySoundButton onClick={handlePlayLetterClick}>ss</PlaySoundButton>
+        <PlayWordButton onClick={handlePlayWordClick}>ww</PlayWordButton>
       </Container>
     </>
   )
 }
 
 Keyboard.propTypes = {
-  letters: PropTypes.array.isRequired
+  letters: PropTypes.array.isRequired,
+  selectedLetter: PropTypes.object,
+  handleClickedButton: PropTypes.func.isRequired,
+  handlePlayLetterButton: PropTypes.func.isRequired,
+  handlePlayWordButton: PropTypes.func.isRequired
 }
+
+export default Keyboard

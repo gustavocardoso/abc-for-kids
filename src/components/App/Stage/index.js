@@ -1,14 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import * as S from './styles'
 
-export default function Stage({ selectedLetter }) {
+const Stage = ({ selectedLetter }) => {
   const { character, word } = selectedLetter
   const object = 'wolf'
-  const image =
-    character === ''
-      ? '/assets/images/select.svg'
-      : `/assets/images/${object}.svg`
+  const image = character === '' ? '/assets/images/select.svg' : `/assets/images/${object}.svg`
 
   return (
     <>
@@ -23,11 +21,15 @@ export default function Stage({ selectedLetter }) {
         <S.WordBox>
           {character !== '' && <S.Word>{word}</S.Word>}
           <S.Icon src={image} />
-          {character === '' && (
-            <S.Instructions>Please, select a letter below!</S.Instructions>
-          )}
+          {character === '' && <S.Instructions>Please, select a letter below!</S.Instructions>}
         </S.WordBox>
       </S.Container>
     </>
   )
 }
+
+Stage.propTypes = {
+  selectedLetter: PropTypes.object
+}
+
+export default Stage
