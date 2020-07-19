@@ -7,7 +7,12 @@ const Player = React.forwardRef(({ audioSrc, folder }, ref) => {
       {audioSrc.length > 0 && (
         <audio ref={ref}>
           {audioSrc.map((source) => (
-            <source id={folder} src={`/assets/audio/${folder}/${source.file}`} type={source.type} key={source.file} />
+            <source
+              id={folder}
+              src={`${process.env.PUBLIC_URL}/assets/audio/${folder}/${source.file}`}
+              type={source.type}
+              key={source.file}
+            />
           ))}
         </audio>
       )}
