@@ -4,6 +4,9 @@ import Logo from '../Shared/Logo'
 import Stage from './Stage'
 import Keyboard from './Keyboard'
 import Player from './Player'
+
+import alphabetData from '../../data/letters.json'
+
 import { Container, Header, Separator } from './styles'
 
 const App = () => {
@@ -23,11 +26,7 @@ const App = () => {
   useEffect(() => {
     const fetchAlphabet = async () => {
       setLoadingData(true)
-
-      const response = await window.fetch('./assets/data/letters.json')
-      const data = await response.json()
-
-      setAlphabet(data)
+      setAlphabet(alphabetData)
       setLoadingData(false)
     }
 

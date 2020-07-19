@@ -20,7 +20,7 @@ const Stage = ({ selectedLetter }) => {
 
         <S.WordBox>
           {character !== '' && <S.Word>{word}</S.Word>}
-          <S.Icon src={image} />
+          <S.Icon src={process.env.PUBLIC_URL + image} />
           {character === '' && <S.Instructions>Please, select a letter below!</S.Instructions>}
         </S.WordBox>
       </S.Container>
