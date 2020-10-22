@@ -10,7 +10,6 @@
       }
     ]
   },
-
   {
     "character": "b",
     "words": [
@@ -22,7 +21,6 @@
       }
     ]
   },
-
   {
     "character": "c",
     "words": [
@@ -34,7 +32,6 @@
       }
     ]
   },
-
   {
     "character": "d",
     "words": [
@@ -46,7 +43,6 @@
       }
     ]
   },
-
   {
     "character": "e",
     "words": [
@@ -54,11 +50,10 @@
         "word": "elephant"
       },
       {
-        "word": "ear"
+        "word": "egg"
       }
     ]
   },
-
   {
     "character": "f",
     "words": [
@@ -70,7 +65,6 @@
       }
     ]
   },
-
   {
     "character": "g",
     "words": [
@@ -78,11 +72,10 @@
         "word": "girl"
       },
       {
-        "word": "goose"
+        "word": "guitar"
       }
     ]
   },
-
   {
     "character": "h",
     "words": [
@@ -94,7 +87,6 @@
       }
     ]
   },
-
   {
     "character": "i",
     "words": [
@@ -106,7 +98,6 @@
       }
     ]
   },
-
   {
     "character": "j",
     "words": [
@@ -118,7 +109,6 @@
       }
     ]
   },
-
   {
     "character": "k",
     "words": [
@@ -130,7 +120,6 @@
       }
     ]
   },
-
   {
     "character": "l",
     "words": [
@@ -142,7 +131,6 @@
       }
     ]
   },
-
   {
     "character": "m",
     "words": [
@@ -150,11 +138,10 @@
         "word": "monkey"
       },
       {
-        "word": "milk"
+        "word": "mouth"
       }
     ]
   },
-
   {
     "character": "n",
     "words": [
@@ -166,7 +153,6 @@
       }
     ]
   },
-
   {
     "character": "o",
     "words": [
@@ -178,7 +164,6 @@
       }
     ]
   },
-
   {
     "character": "p",
     "words": [
@@ -190,19 +175,17 @@
       }
     ]
   },
-
   {
     "character": "q",
     "words": [
       {
-        "word": "quail"
+        "word": "quiet"
       },
       {
         "word": "queen"
       }
     ]
   },
-
   {
     "character": "r",
     "words": [
@@ -214,7 +197,6 @@
       }
     ]
   },
-
   {
     "character": "s",
     "words": [
@@ -226,7 +208,6 @@
       }
     ]
   },
-
   {
     "character": "t",
     "words": [
@@ -238,7 +219,6 @@
       }
     ]
   },
-
   {
     "character": "u",
     "words": [
@@ -250,7 +230,6 @@
       }
     ]
   },
-
   {
     "character": "v",
     "words": [
@@ -258,11 +237,10 @@
         "word": "vase"
       },
       {
-        "word": "vegetable"
+        "word": "van"
       }
     ]
   },
-
   {
     "character": "w",
     "words": [
@@ -274,7 +252,6 @@
       }
     ]
   },
-
   {
     "character": "x",
     "words": [
@@ -286,7 +263,6 @@
       }
     ]
   },
-
   {
     "character": "y",
     "words": [
@@ -298,7 +274,6 @@
       }
     ]
   },
-
   {
     "character": "z",
     "words": [
