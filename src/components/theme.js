@@ -49,6 +49,7 @@ const mainTheme = {
     keyboardBgColor: colorPalette.primary,
     keyboardLetterBgColor: colorPalette.light,
     keyboardLetterBgColorActive: colorPalette.highlight,
+    keyboardLetterBgColorClick: colorPalette.highlight,
     keyboardLetterTextColor: colorPalette.primary,
     keyboardLetterTextColorActive: colorPalette.light,
     keyboardLetterBorderColor: colorPalette.dark

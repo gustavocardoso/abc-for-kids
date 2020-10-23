@@ -64,6 +64,11 @@ export const LetterButton = styled(basicButton)`
     border: 1px solid ${({ theme }) => theme.colors.keyboardLetterBgColorActive};
     box-shadow: none;
   }
+
+  &:active {
+    background: ${({ theme }) => darken(0.2, theme.colors.keyboardLetterBgColorClick)};
+    transform: scale(0.95);
+  }
 `
 
 export const PlaySoundButton = styled(basicButton)`

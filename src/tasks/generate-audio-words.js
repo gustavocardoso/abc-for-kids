@@ -1,7 +1,7 @@
 const Txt2Audio = require('txt2audio')
 const path = require('path')
 
-const alphabet = require('../../public/assets/data/letters.json')
+const alphabet = require('../data/letters.json')
 
 const generateAudioWords = () => {
   const wordsByLetter = alphabet.reduce((wordsArray, letter) => {

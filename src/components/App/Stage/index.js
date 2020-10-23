@@ -5,8 +5,7 @@ import * as S from './styles'
 
 const Stage = ({ selectedLetter }) => {
   const { character, word } = selectedLetter
-  const object = 'wolf'
-  const image = character === '' ? '/assets/images/select.svg' : `/assets/images/${object}.svg`
+  const image = character === '' ? '/assets/images/select.svg' : `/assets/images/${word}.svg`
 
   return (
     <>
