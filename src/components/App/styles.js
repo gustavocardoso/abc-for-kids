@@ -6,6 +6,10 @@ export const Container = styled.div`
   height: 100%;
   display: grid;
   grid-template-rows: 3.125rem 16.25rem 1.5rem 1fr;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    grid-template-rows: 3.125rem 18rem 1.5rem 1fr;
+  }
 `
 
 export const Header = styled.header`

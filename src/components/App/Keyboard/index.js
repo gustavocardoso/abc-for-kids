@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Container, LetterButton, PlaySoundButton, PlayWordButton } from './styles'
+import { Container, LettersContainer, LetterButton, PlaySoundButton, PlayWordButton } from './styles'
 
 const Keyboard = ({ letters, selectedLetter, handleClickedButton, handlePlayLetterButton, handlePlayWordButton }) => {
   const { character } = selectedLetter
@@ -21,14 +21,16 @@ const Keyboard = ({ letters, selectedLetter, handleClickedButton, handlePlayLett
   return (
     <>
       <Container>
-        {letters.map((letter) => (
-          <LetterButton key={letter} onClick={handleClick} className={character === letter ? 'active' : 'null'}>
-            {letter}
-          </LetterButton>
-        ))}
+        <LettersContainer>
+          {letters.map((letter) => (
+            <LetterButton key={letter} onClick={handleClick} className={character === letter ? 'active' : 'null'}>
+              {letter}
+            </LetterButton>
+          ))}
 
-        <PlaySoundButton onClick={handlePlayLetterClick}>ss</PlaySoundButton>
-        <PlayWordButton onClick={handlePlayWordClick}>ww</PlayWordButton>
+          <PlaySoundButton onClick={handlePlayLetterClick}>ss</PlaySoundButton>
+          <PlayWordButton onClick={handlePlayWordClick}>ww</PlayWordButton>
+        </LettersContainer>
       </Container>
     </>
   )

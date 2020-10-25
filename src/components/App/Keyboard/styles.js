@@ -4,6 +4,22 @@ import { darken, lighten } from 'polished'
 export const Container = styled.div`
   ${({ theme }) => theme.mixins.flexAlign()}
   width: 100%;
+  background-color: ${({ theme }) => theme.colors.keyboardBgColor};
+  padding: 1.5rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    background-color: red;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    background-color: #444;
+  }
+`
+
+export const LettersContainer = styled.div`
+  ${({ theme }) => theme.mixins.flexAlign()}
+  width: 100%;
+  height: 100%;
   display: grid;
   /*   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
   grid-gap: 0.6rem;
@@ -11,8 +27,10 @@ export const Container = styled.div`
   grid-template-rows: 50px 50px 50px 50px 50px;
   justify-content: space-between;
   align-content: space-around;
-  background-color: ${({ theme }) => theme.colors.keyboardBgColor};
-  padding: 1.5rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 70%;
+  }
 `
 
 const basicButton = styled.button`

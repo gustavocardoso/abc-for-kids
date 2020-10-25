@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import * as S from './styles'
+import * as S from "./styles";
 
 function Logo({ type }) {
   return (
@@ -11,15 +11,15 @@ function Logo({ type }) {
       <S.SpanThirdLetter>C</S.SpanThirdLetter>
       <S.SpanPhrase type={type}>for Kids</S.SpanPhrase>
     </S.Title>
-  )
+  );
 }
 
 Logo.defaultProps = {
-  type: 'regular'
-}
+  type: "regular",
+};
 
 Logo.propTypes = {
-  type: PropTypes.string
-}
+  type: PropTypes.string,
+};
 
-export default Logo
+export default Logo;
