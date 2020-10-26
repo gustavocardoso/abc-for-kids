@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { darken, lighten } from 'polished'
+import styled from "styled-components";
+import { darken, lighten } from "polished";
 
 export const Container = styled.div`
   ${({ theme }) => theme.mixins.flexAlign()}
@@ -14,7 +14,7 @@ export const Container = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     background-color: #444;
   }
-`
+`;
 
 export const LettersContainer = styled.div`
   ${({ theme }) => theme.mixins.flexAlign()}
@@ -31,7 +31,7 @@ export const LettersContainer = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     width: 70%;
   }
-`
+`;
 
 const basicButton = styled.button`
   ${({ theme }) => theme.mixins.flexAlign()}
@@ -62,7 +62,14 @@ const basicButton = styled.button`
     border: 1px solid ${({ theme }) => theme.colors.keyboardLetterBgColorActive};
     box-shadow: none;
   }
-`
+
+  .buttonText {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-left: 0.4rem;
+  }
+`;
 
 export const LetterButton = styled(basicButton)`
   width: 50px;
@@ -84,19 +91,24 @@ export const LetterButton = styled(basicButton)`
   }
 
   &:active {
-    background: ${({ theme }) => darken(0.2, theme.colors.keyboardLetterBgColorClick)};
+    background: ${({ theme }) =>
+      darken(0.2, theme.colors.keyboardLetterBgColorClick)};
     transform: scale(0.95);
   }
-`
+`;
 
 export const PlaySoundButton = styled(basicButton)`
   height: 50px;
   grid-column: 1 / span 2;
   grid-row: 5;
-`
+`;
 
 export const PlayWordButton = styled(basicButton)`
   height: 50px;
   grid-column: 5 / span 2;
   grid-row: 5;
-`
+`;
+
+export const Icon = styled.img`
+  width: 20px;
+`;
