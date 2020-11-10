@@ -50,10 +50,6 @@ const Keyboard = ({
             </LetterButton>
           ))}
 
-          <PlaySoundButton onClick={handlePlayLetterClick}>
-            <Icon src={playButton} alt="Play" />{" "}
-            <span className="buttonText">letter</span>
-          </PlaySoundButton>
           <PlayWordButton onClick={handlePlayWordClick}>
             <Icon src={playButton} alt="Play" />{" "}
             <span className="buttonText">word</span>

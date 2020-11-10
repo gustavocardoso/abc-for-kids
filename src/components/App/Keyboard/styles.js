@@ -8,11 +8,9 @@ export const Container = styled.div`
   padding: 1.5rem;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-    background-color: red;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
-    background-color: #444;
   }
 `;
 
@@ -95,6 +93,16 @@ export const LetterButton = styled(basicButton)`
       darken(0.2, theme.colors.keyboardLetterBgColorClick)};
     transform: scale(0.95);
   }
+
+  &:nth-child(25) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  &:nth-child(26) {
+    grid-column: 6;
+    grid-row: 5;
+  }
 `;
 
 export const PlaySoundButton = styled(basicButton)`
@@ -105,7 +113,7 @@ export const PlaySoundButton = styled(basicButton)`
 
 export const PlayWordButton = styled(basicButton)`
   height: 50px;
-  grid-column: 5 / span 2;
+  grid-column: 2 / span 4;
   grid-row: 5;
 `;
 
