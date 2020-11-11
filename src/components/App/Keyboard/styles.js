@@ -41,8 +41,8 @@ const basicButton = styled.button`
   color: ${({ theme }) => theme.colors.keyboardLetterTextColor};
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => lighten(0.8, theme.colors.keyboardLetterBgColor)} 20%,
-    ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBgColor)} 100%
+    ${({ theme }) => lighten(0.8, theme.colors.keyboardLetterBgColor)} 90%,
+    ${({ theme }) => darken(0.2, theme.colors.keyboardLetterBgColor)} 100%
   );
   background-color: ${({ theme }) => theme.colors.keyboardLetterBgColor};
   border-radius: 0.4rem;
@@ -105,16 +105,27 @@ export const LetterButton = styled(basicButton)`
   }
 `;
 
-export const PlaySoundButton = styled(basicButton)`
-  height: 50px;
-  grid-column: 1 / span 2;
-  grid-row: 5;
-`;
-
 export const PlayWordButton = styled(basicButton)`
   height: 50px;
+  background: linear-gradient(
+    to bottom,
+    ${({ theme }) => lighten(0.1, theme.colors.keyboardWordBgColor)} 90%,
+    ${({ theme }) => darken(0.2, theme.colors.keyboardWordBgColor)} 100%
+  );
+  background-color: ${({ theme }) => theme.colors.keyboardWordBgColor};
+  border-radius: 0.4rem;
+  border: 1px solid
+    ${({ theme }) => lighten(0.7, theme.colors.keyboardWordBorderColor)};
   grid-column: 2 / span 4;
   grid-row: 5;
+
+  &:active,
+  .active {
+    color: ${({ theme }) => theme.colors.keyboardWordTextColorActive};
+    background: ${({ theme }) => theme.colors.keyboardWordBgColorActive};
+    border: 1px solid ${({ theme }) => theme.colors.keyboardWordBgColorActive};
+    box-shadow: none;
+  }
 `;
 
 export const Icon = styled.img`

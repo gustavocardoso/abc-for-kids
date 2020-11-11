@@ -2,7 +2,7 @@ const colors = {
   alabaster: "#fafafa",
   camelot: "#8F2D56",
   doveGray: "#555",
-  carolinaBlue: "#5398BE",
+  carolinaBlue: "#279AF1",
   mineShaft: "#222",
   pampas: "#F2F1EB",
   razzmatazz: "#D81159",
@@ -58,6 +58,12 @@ const mainTheme = {
     keyboardLetterTextColor: colorPalette.gray,
     keyboardLetterTextColorActive: colorPalette.light,
     keyboardLetterBorderColor: colorPalette.dark,
+
+    keyboardWordBgColor: colorPalette.primary,
+    keyboardWordBorderColor: colorPalette.primary,
+    keyboardWordBgColorActive: colorPalette.primary,
+    keyboardWordBgColorClick: colorPalette.primary,
+    keyboardWordTextColorActive: colorPalette.primary,
   },
 
   mixins: {

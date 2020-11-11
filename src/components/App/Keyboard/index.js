@@ -13,23 +13,16 @@ import {
 // const playButton = process.env.PUBLIC_URL + "/assets/images/icons/play.svg";
 import playButton from "../../../assets/icons/play.svg";
 
-console.log(playButton);
-
 const Keyboard = ({
   letters,
   selectedLetter,
   handleClickedButton,
-  handlePlayLetterButton,
   handlePlayWordButton,
 }) => {
   const { character } = selectedLetter;
 
   const handleClick = (event) => {
     handleClickedButton(event);
-  };
-
-  const handlePlayLetterClick = (event) => {
-    handlePlayLetterButton();
   };
 
   const handlePlayWordClick = (event) => {
@@ -51,8 +44,7 @@ const Keyboard = ({
           ))}
 
           <PlayWordButton onClick={handlePlayWordClick}>
-            <Icon src={playButton} alt="Play" />{" "}
-            <span className="buttonText">word</span>
+            <Icon src={playButton} alt="Play word" />{" "}
           </PlayWordButton>
         </LettersContainer>
       </Container>
