@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 
-import Logo from "../../components/Shared/Logo";
+// import Logo from "../../components/Shared/Logo";
 import { StartButton } from "./styles";
 
 const IntroScreen = ({ startApp }) => {
@@ -28,7 +28,7 @@ const IntroScreen = ({ startApp }) => {
 
   return (
     <>
-      <Logo type="intro" />
+      {/* <Logo type="intro" /> */}
       <StartButton onClick={handleStartApp}>
         [press here or hit &apos;space&apos;]
       </StartButton>
