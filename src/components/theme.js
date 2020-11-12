@@ -1,38 +1,44 @@
 const colors = {
-  camelot: '#8F2D56',
-  pampas: '#F2F1EB',
-  elm: '#218380',
-  mineShaft: '#222',
-  razzmatazz: '#D81159',
-  renoSand: '#9B6A11',
-  yellowOrange: '#FFBC42'
-}
+  alabaster: "#fafafa",
+  camelot: "#8F2D56",
+  doveGray: "#555",
+  carolinaBlue: "#279AF1",
+  mineShaft: "#222",
+  pampas: "#F2F1EB",
+  ruby: "#D81159",
+  renoSand: "#9B6A11",
+  yellowOrange: "#FFBC42",
+};
 
 const colorPalette = {
+  lightest: colors.alabaster,
   light: colors.pampas,
+  gray: colors.doveGray,
   dark: colors.mineShaft,
-  primary: colors.elm,
-  highlight: colors.yellowOrange
-}
+  primary: colors.carolinaBlue,
+  highlight: colors.yellowOrange,
+  danger: colors.ruby,
+};
 
 const mainTheme = {
   media: {
-    desktop: '55rem'
+    desktop: "55rem",
+    tablet: "43rem",
   },
 
   fonts: {
     base: "'Roboto', sans-serif;",
-    styled: "'Henny Penny', cursive;"
+    styled: "'Roboto Slab', serif;",
   },
 
   colors: {
     mainBgColor: colorPalette.highlight,
     mainTextColor: colorPalette.dark,
 
-    titleBaseColor: colorPalette.light,
-    titleFirstLetter: colors.razzmatazz,
+    titleBaseColor: colorPalette.lightest,
+    titleFirstLetter: colors.ruby,
     titleSecondLetter: colors.camelot,
-    titleThirdLetter: colors.elm,
+    titleThirdLetter: colors.carolinaBlue,
 
     startButtonBgColor: colorPalette.dark,
     startButtonTextColor: colorPalette.dark,
@@ -40,19 +46,25 @@ const mainTheme = {
 
     headerBgColor: colorPalette.highlight,
 
-    stageBgColor: colorPalette.light,
+    stageBgColor: colorPalette.lightest,
     stageLettersTextColor: colorPalette.dark,
     stageWordTextColor: colorPalette.primary,
 
     separatorBgColor: colorPalette.highlight,
 
-    keyboardBgColor: colorPalette.primary,
-    keyboardLetterBgColor: colorPalette.light,
+    keyboardBgColor: colorPalette.light,
+    keyboardLetterBgColor: colorPalette.danger,
     keyboardLetterBgColorActive: colorPalette.highlight,
     keyboardLetterBgColorClick: colorPalette.highlight,
-    keyboardLetterTextColor: colorPalette.primary,
+    keyboardLetterTextColor: colorPalette.gray,
     keyboardLetterTextColorActive: colorPalette.light,
-    keyboardLetterBorderColor: colorPalette.dark
+    keyboardLetterBorderColor: colorPalette.danger,
+
+    keyboardWordBgColor: colorPalette.primary,
+    keyboardWordBorderColor: colorPalette.primary,
+    keyboardWordBgColorActive: colorPalette.primary,
+    keyboardWordBgColorClick: colorPalette.primary,
+    keyboardWordTextColorActive: colorPalette.primary,
   },
 
   mixins: {
@@ -61,7 +73,7 @@ const mainTheme = {
         display: flex;
         justify-content: center;
         align-items: center;
-      `
+      `;
     },
 
     flexAlignColumn: () => {
@@ -70,9 +82,9 @@ const mainTheme = {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      `
-    }
-  }
-}
+      `;
+    },
+  },
+};
 
-export default mainTheme
+export default mainTheme;
