@@ -38,15 +38,16 @@ const basicButton = styled.button`
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 0px 1px 0px #ffffff;
-  color: #fafafa;
+  color: ${({ theme }) => theme.colors.keyboardLetterTextColor};
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => lighten(0.1, theme.colors.keyboardLetterBgColor)} 95%,
+    ${({ theme }) => lighten(0.1, theme.colors.keyboardLetterBgColor)} 90%,
     ${({ theme }) => darken(0.2, theme.colors.keyboardLetterBgColor)} 100%
   );
   background-color: ${({ theme }) => theme.colors.keyboardLetterBgColor};
   border-radius: 0.4rem;
-  border: 1px solid ${({ theme }) => theme.colors.keyboardLetterBorderColor};
+  border: 1px solid
+    ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBorderColor)};
   box-shadow: inset 0px 2px 0px 0px
     ${({ theme }) => lighten(0.3, theme.colors.keyboardLetterBorderColor)};
   cursor: pointer;
@@ -116,7 +117,7 @@ export const PlayWordButton = styled(basicButton)`
   border-radius: 0.4rem;
   border: 1px solid ${({ theme }) => theme.colors.keyboardWordBorderColor};
   box-shadow: inset 0px 2px 0px 0px
-    ${({ theme }) => lighten(0.3, theme.colors.keyboardWordBorderColor)};
+    ${({ theme }) => lighten(0.2, theme.colors.keyboardWordBorderColor)};
   grid-column: 2 / span 4;
   grid-row: 5;
 

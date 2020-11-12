@@ -52,7 +52,7 @@ const App = () => {
     }
   }, [selectedLetter]);
 
-  const handleClickedButton = (event) => {
+  const handleClickedButton = async (event) => {
     const clickedLetter = event.target.innerText.toLowerCase();
     const filteredLetter = alphabet.filter(
       (letter) => letter.character === clickedLetter
@@ -61,15 +61,26 @@ const App = () => {
     const randomWord = words[Math.floor(Math.random() * words.length)].word;
 
     setSelectedLetter({ character: clickedLetter, word: randomWord });
+
+    await handlePlayLetterButton();
   };
 
   const handlePlayLetterButton = (event) => {
-    playerLetter.current.pause();
-    playerLetter.current.load();
-    playerLetter.current.play();
+    return new Promise((resolve, reject) => {
+      window.setTimeout(() => {
+        playerLetter.current.pause();
+        playerLetter.current.load();
+        playerLetter.current.play();
+        resolve("Playing sound");
+      }, 300);
+    });
   };
 
-  const handlePlayWordButton = (event) => {
+  const handlePlayWordButton = () => {
+    if (audioLetterSrc.length === 0) {
+      return false;
+    }
+
     playerWord.current.pause();
     playerWord.current.load();
     playerWord.current.play();
