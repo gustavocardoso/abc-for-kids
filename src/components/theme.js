@@ -5,7 +5,7 @@ const colors = {
   carolinaBlue: "#279AF1",
   mineShaft: "#222",
   pampas: "#F2F1EB",
-  razzmatazz: "#D81159",
+  ruby: "#D81159",
   renoSand: "#9B6A11",
   yellowOrange: "#FFBC42",
 };
@@ -17,6 +17,7 @@ const colorPalette = {
   dark: colors.mineShaft,
   primary: colors.carolinaBlue,
   highlight: colors.yellowOrange,
+  danger: colors.ruby,
 };
 
 const mainTheme = {
@@ -35,7 +36,7 @@ const mainTheme = {
     mainTextColor: colorPalette.dark,
 
     titleBaseColor: colorPalette.lightest,
-    titleFirstLetter: colors.razzmatazz,
+    titleFirstLetter: colors.ruby,
     titleSecondLetter: colors.camelot,
     titleThirdLetter: colors.carolinaBlue,
 
@@ -52,12 +53,12 @@ const mainTheme = {
     separatorBgColor: colorPalette.highlight,
 
     keyboardBgColor: colorPalette.light,
-    keyboardLetterBgColor: colorPalette.light,
+    keyboardLetterBgColor: colorPalette.danger,
     keyboardLetterBgColorActive: colorPalette.highlight,
     keyboardLetterBgColorClick: colorPalette.highlight,
     keyboardLetterTextColor: colorPalette.gray,
     keyboardLetterTextColorActive: colorPalette.light,
-    keyboardLetterBorderColor: colorPalette.dark,
+    keyboardLetterBorderColor: colorPalette.danger,
 
     keyboardWordBgColor: colorPalette.primary,
     keyboardWordBorderColor: colorPalette.primary,
