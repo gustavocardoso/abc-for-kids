@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Logo from "../Shared/Logo";
+// import Logo from "../Shared/Logo";
 import Stage from "./Stage";
 import Keyboard from "./Keyboard";
 import Player from "./Player";
@@ -89,9 +89,7 @@ const App = () => {
   return (
     <>
       <Container>
-        <Header>
-          <Logo />
-        </Header>
+        <Header>{/* <Logo /> */}</Header>
 
         <Stage selectedLetter={selectedLetter} />
         <Separator />
