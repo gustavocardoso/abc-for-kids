@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 
-import Logo from "../Shared/Logo";
+import Logo from "../../components/Shared/Logo";
 import { StartButton } from "./styles";
 
 const IntroScreen = ({ startApp }) => {
