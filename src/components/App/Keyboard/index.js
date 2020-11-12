@@ -5,7 +5,6 @@ import {
   Container,
   LettersContainer,
   LetterButton,
-  PlaySoundButton,
   PlayWordButton,
   Icon,
 } from "./styles";

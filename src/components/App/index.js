@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-// import Logo from "../Shared/Logo";
+import Logo from "../Shared/Logo";
 import Stage from "./Stage";
 import Keyboard from "./Keyboard";
 import Player from "./Player";
@@ -52,7 +52,7 @@ const App = () => {
     }
   }, [selectedLetter]);
 
-  const handleClickedButton = async (event) => {
+  const handleClickedButton = (event) => {
     const clickedLetter = event.target.innerText.toLowerCase();
     const filteredLetter = alphabet.filter(
       (letter) => letter.character === clickedLetter
@@ -61,26 +61,15 @@ const App = () => {
     const randomWord = words[Math.floor(Math.random() * words.length)].word;
 
     setSelectedLetter({ character: clickedLetter, word: randomWord });
-
-    await handlePlayLetterButton();
   };
 
   const handlePlayLetterButton = (event) => {
-    return new Promise((resolve, reject) => {
-      window.setTimeout(() => {
-        playerLetter.current.pause();
-        playerLetter.current.load();
-        playerLetter.current.play();
-        resolve("Playing sound");
-      }, 300);
-    });
+    playerLetter.current.pause();
+    playerLetter.current.load();
+    playerLetter.current.play();
   };
 
-  const handlePlayWordButton = () => {
-    if (audioWordSrc.length === 0) {
-      return false;
-    }
-
+  const handlePlayWordButton = (event) => {
     playerWord.current.pause();
     playerWord.current.load();
     playerWord.current.play();
@@ -89,7 +78,9 @@ const App = () => {
   return (
     <>
       <Container>
-        <Header>{/* <Logo /> */}</Header>
+        <Header>
+          <Logo />
+        </Header>
 
         <Stage selectedLetter={selectedLetter} />
         <Separator />
