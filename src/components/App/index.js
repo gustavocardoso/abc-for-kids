@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Stage from "./Stage";
 import Keyboard from "./Keyboard";
 import Player from "./Player";
-import Logo from "../Common/Logo";
+import Logo from "../Shared/Logo";
 
 import alphabetData from "../../data/letters.json";
 
