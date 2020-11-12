@@ -47,7 +47,7 @@ const basicButton = styled.button`
   background-color: ${({ theme }) => theme.colors.keyboardLetterBgColor};
   border-radius: 0.4rem;
   border: 1px solid
-    ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBorderColor)};
+  ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBorderColor)};
   box-shadow: inset 0px 2px 0px 0px
     ${({ theme }) => lighten(0.3, theme.colors.keyboardLetterBorderColor)};
   cursor: pointer;
