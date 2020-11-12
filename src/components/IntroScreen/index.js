@@ -1,41 +1,43 @@
-import React, { useEffect, useCallback } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect, useCallback } from "react";
+import PropTypes from "prop-types";
 
-import Logo from '../Shared/Logo'
-import { StartButton } from './styles'
+// import Logo from "../Shared/Logo";
+import { StartButton } from "./styles";
 
 const IntroScreen = ({ startApp }) => {
   const handleStartApp = () => {
-    startApp()
-  }
+    startApp();
+  };
 
   const handleKeyDown = useCallback(
-    e => {
+    (e) => {
       if (e.keyCode === 32) {
-        startApp()
+        startApp();
       }
     },
     [startApp]
-  )
+  );
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown, false)
+    window.addEventListener("keydown", handleKeyDown, false);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown, false)
-    }
-  }, [handleKeyDown])
+      window.removeEventListener("keydown", handleKeyDown, false);
+    };
+  }, [handleKeyDown]);
 
   return (
     <>
-      <Logo type='intro' />
-      <StartButton onClick={handleStartApp}>[press here or hit &apos;space&apos;]</StartButton>
+      {/* <Logo type="intro" /> */}
+      <StartButton onClick={handleStartApp}>
+        [press here or hit &apos;space&apos;]
+      </StartButton>
     </>
-  )
-}
+  );
+};
 
 IntroScreen.propTypes = {
-  startApp: PropTypes.func.isRequired
-}
+  startApp: PropTypes.func.isRequired,
+};
 
-export default IntroScreen
+export default IntroScreen;
