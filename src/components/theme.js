@@ -53,12 +53,12 @@ const mainTheme = {
     separatorBgColor: colorPalette.highlight,
 
     keyboardBgColor: colorPalette.light,
-    keyboardLetterBgColor: colorPalette.danger,
+    keyboardLetterBgColor: colorPalette.light,
     keyboardLetterBgColorActive: colorPalette.highlight,
     keyboardLetterBgColorClick: colorPalette.highlight,
     keyboardLetterTextColor: colorPalette.gray,
     keyboardLetterTextColorActive: colorPalette.light,
-    keyboardLetterBorderColor: colorPalette.danger,
+    keyboardLetterBorderColor: colorPalette.dark,
 
     keyboardWordBgColor: colorPalette.primary,
     keyboardWordBorderColor: colorPalette.primary,
