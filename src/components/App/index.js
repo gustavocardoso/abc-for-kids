@@ -77,7 +77,7 @@ const App = () => {
   };
 
   const handlePlayWordButton = () => {
-    if (audioWordSrc.length === 0) {
+    if (audioLetterSrc.length === 0) {
       return false;
     }
 

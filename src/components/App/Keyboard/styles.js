@@ -47,8 +47,9 @@ const basicButton = styled.button`
   background-color: ${({ theme }) => theme.colors.keyboardLetterBgColor};
   border-radius: 0.4rem;
   border: 1px solid
-    ${({ theme }) => lighten(0.7, theme.colors.keyboardLetterBorderColor)};
-  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBorderColor)};
+  box-shadow: inset 0px 2px 0px 0px
+    ${({ theme }) => lighten(0.3, theme.colors.keyboardLetterBorderColor)};
   cursor: pointer;
   outline: 0;
   transition: all 0.1s ease;
@@ -115,7 +116,8 @@ export const PlayWordButton = styled(basicButton)`
   background-color: ${({ theme }) => theme.colors.keyboardWordBgColor};
   border-radius: 0.4rem;
   border: 1px solid ${({ theme }) => theme.colors.keyboardWordBorderColor};
-  box-shadow: none;
+  box-shadow: inset 0px 2px 0px 0px
+    ${({ theme }) => lighten(0.2, theme.colors.keyboardWordBorderColor)};
   grid-column: 2 / span 4;
   grid-row: 5;
 
