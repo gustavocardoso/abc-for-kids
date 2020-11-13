@@ -134,6 +134,14 @@ export const PlayWordButton = styled(basicButton)`
     border: 1px solid ${({ theme }) => theme.colors.keyboardWordBgColorActive};
     box-shadow: none;
   }
+
+  &.disabled {
+    background: none;
+    background-color: ${({ theme }) =>
+      lighten(0.4, theme.colors.keyboardWordDisabledBgColor)};
+    border: none;
+    box-shadow: none;
+  }
 `;
 
 export const Icon = styled.img`

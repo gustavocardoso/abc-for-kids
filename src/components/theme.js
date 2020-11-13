@@ -65,6 +65,7 @@ const mainTheme = {
     keyboardWordBgColorActive: colorPalette.primary,
     keyboardWordBgColorClick: colorPalette.primary,
     keyboardWordTextColorActive: colorPalette.primary,
+    keyboardWordDisabledBgColor: colorPalette.gray,
   },
 
   mixins: {
