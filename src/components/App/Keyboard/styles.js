@@ -5,7 +5,7 @@ export const Container = styled.div`
   ${({ theme }) => theme.mixins.flexAlign()}
   width: 100%;
   background-color: ${({ theme }) => theme.colors.keyboardBgColor};
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
   }
@@ -27,7 +27,13 @@ export const LettersContainer = styled.div`
   align-content: space-around;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-    width: 70%;
+    width: 60%;
+    height: 60%;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    width: 40%;
+    height: 40%;
   }
 `;
 
@@ -47,7 +53,7 @@ const basicButton = styled.button`
   background-color: ${({ theme }) => theme.colors.keyboardLetterBgColor};
   border-radius: 0.4rem;
   border: 1px solid
-  ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBorderColor)};
+    ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBorderColor)};
   box-shadow: inset 0px 2px 0px 0px
     ${({ theme }) => lighten(0.3, theme.colors.keyboardLetterBorderColor)};
   cursor: pointer;
