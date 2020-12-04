@@ -15,6 +15,7 @@ import playButton from "../../../assets/icons/play.svg";
 const Keyboard = ({
   letters,
   selectedLetter,
+  audioIsLoaded,
   handleClickedButton,
   handlePlayWordButton,
 }) => {
@@ -42,7 +43,10 @@ const Keyboard = ({
             </LetterButton>
           ))}
 
-          <PlayWordButton onClick={handlePlayWordClick}>
+          <PlayWordButton
+            onClick={handlePlayWordClick}
+            className={!audioIsLoaded ? "disabled" : null}
+          >
             <Icon src={playButton} alt="Play word" />{" "}
           </PlayWordButton>
         </LettersContainer>
@@ -54,6 +58,7 @@ const Keyboard = ({
 Keyboard.propTypes = {
   letters: PropTypes.array.isRequired,
   selectedLetter: PropTypes.object,
+  audioIsLoaded: PropTypes.bool.isRequired,
   handleClickedButton: PropTypes.func.isRequired,
   handlePlayLetterButton: PropTypes.func.isRequired,
   handlePlayWordButton: PropTypes.func.isRequired,

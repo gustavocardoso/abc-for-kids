@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const Player = React.forwardRef(({ audioSrc, folder }, ref) => {
   return (
@@ -17,15 +17,14 @@ const Player = React.forwardRef(({ audioSrc, folder }, ref) => {
         </audio>
       )}
     </>
-  )
-})
+  );
+});
 
-Player.displayName = 'Player'
+Player.displayName = "Player";
 
 Player.propTypes = {
   audioSrc: PropTypes.array,
-  folder: PropTypes.string.isRequired
-}
+  folder: PropTypes.string.isRequired,
+};
 
-export default Player
-export const proptype = Player.PropTypes
+export default Player;

@@ -19,6 +19,7 @@ const App = () => {
   });
   const [audioLetterSrc, setAudioLetterSrc] = useState([]);
   const [audioWordSrc, setAudioWordSrc] = useState([]);
+  const [audioIsLoaded, setAudioIsLoaded] = useState(false);
 
   const playerLetter = useRef(null);
   const playerWord = useRef(null);
@@ -71,6 +72,7 @@ const App = () => {
         playerLetter.current.pause();
         playerLetter.current.load();
         playerLetter.current.play();
+        setAudioIsLoaded(true);
         resolve("Playing sound");
       }, 300);
     });
@@ -111,6 +113,7 @@ const App = () => {
           <Keyboard
             letters={letters}
             selectedLetter={selectedLetter}
+            audioIsLoaded={audioIsLoaded}
             handleClickedButton={handleClickedButton}
             handlePlayLetterButton={handlePlayLetterButton}
             handlePlayWordButton={handlePlayWordButton}
