@@ -19,4 +19,9 @@ export const StartButton = styled.button`
     background-color: ${({ theme }) =>
       rgba(theme.colors.startButtonBgColor, 0.7)};
   }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 `

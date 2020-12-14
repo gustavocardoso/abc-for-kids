@@ -22,13 +22,21 @@ export const Letter = styled.div`
   font-weight: 900;
   color: ${({ theme }) => theme.colors.stageLettersTextColor};
   margin-bottom: 0.5rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    font-size: 5rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.largeDesktop}) {
+    font-size: 6rem;
+  }
 `
 
-export const UpperCase = styled.div``
-
-export const LowerCase = styled.div`
-  margin-left: 0.2rem;
+export const UpperCase = styled.div`
+  margin-left: 0.3rem;
 `
+
+export const LowerCase = styled.div``
 
 export const WordBox = styled.div`
   ${({ theme }) => theme.mixins.flexAlignColumn()}
@@ -41,14 +49,38 @@ export const Word = styled.h2`
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.stageWordTextColor};
   margin: 0 0 1.8rem 0;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.largeDesktop}) {
+    margin-top: 1rem;
+  }
 `
 
 export const Icon = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    width: 9rem;
+    height: 9rem;
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.largeDesktop}) {
+    width: 14rem;
+    height: 14rem;
+    margin-top: 3rem;
+  }
 `
 
 export const Instructions = styled.p`
   font-size: 0.8rem;
   margin-top: 1.5rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    font-size: 1.4rem;
+  }
 `

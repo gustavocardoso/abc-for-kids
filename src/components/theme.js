@@ -1,14 +1,14 @@
 const colors = {
-  alabaster: "#fafafa",
-  camelot: "#8F2D56",
-  doveGray: "#555",
-  carolinaBlue: "#279AF1",
-  mineShaft: "#222",
-  pampas: "#F2F1EB",
-  ruby: "#D81159",
-  renoSand: "#9B6A11",
-  yellowOrange: "#FFBC42",
-};
+  alabaster: '#fafafa',
+  camelot: '#8F2D56',
+  doveGray: '#555',
+  carolinaBlue: '#279AF1',
+  mineShaft: '#222',
+  pampas: '#F2F1EB',
+  ruby: '#D81159',
+  renoSand: '#9B6A11',
+  yellowOrange: '#FFBC42'
+}
 
 const colorPalette = {
   lightest: colors.alabaster,
@@ -17,18 +17,19 @@ const colorPalette = {
   dark: colors.mineShaft,
   primary: colors.carolinaBlue,
   highlight: colors.yellowOrange,
-  danger: colors.ruby,
-};
+  danger: colors.ruby
+}
 
 const mainTheme = {
   media: {
-    desktop: "55rem",
-    tablet: "43rem",
+    desktop: '55rem',
+    largeDesktop: '130rem',
+    tablet: '43rem'
   },
 
   fonts: {
     base: "'Roboto', sans-serif;",
-    styled: "'Roboto Slab', serif;",
+    styled: "'Roboto Slab', serif;"
   },
 
   colors: {
@@ -52,7 +53,7 @@ const mainTheme = {
 
     separatorBgColor: colorPalette.highlight,
 
-    keyboardBgColor: colorPalette.light,
+    keyboardBgColor: colorPalette.primary,
     keyboardLetterBgColor: colorPalette.light,
     keyboardLetterBgColorActive: colorPalette.highlight,
     keyboardLetterBgColorClick: colorPalette.highlight,
@@ -60,12 +61,12 @@ const mainTheme = {
     keyboardLetterTextColorActive: colorPalette.light,
     keyboardLetterBorderColor: colorPalette.light,
 
-    keyboardWordBgColor: colorPalette.primary,
-    keyboardWordBorderColor: colorPalette.primary,
-    keyboardWordBgColorActive: colorPalette.primary,
-    keyboardWordBgColorClick: colorPalette.primary,
-    keyboardWordTextColorActive: colorPalette.primary,
-    keyboardWordDisabledBgColor: colorPalette.gray,
+    keyboardWordBgColor: colorPalette.danger,
+    keyboardWordBorderColor: colorPalette.danger,
+    keyboardWordBgColorActive: colorPalette.highlight,
+    keyboardWordBgColorClick: colorPalette.highlight,
+    keyboardWordTextColorActive: colorPalette.light,
+    keyboardWordDisabledBgColor: colorPalette.gray
   },
 
   mixins: {
@@ -74,7 +75,7 @@ const mainTheme = {
         display: flex;
         justify-content: center;
         align-items: center;
-      `;
+      `
     },
 
     flexAlignColumn: () => {
@@ -83,9 +84,9 @@ const mainTheme = {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      `;
-    },
-  },
-};
+      `
+    }
+  }
+}
 
-export default mainTheme;
+export default mainTheme
