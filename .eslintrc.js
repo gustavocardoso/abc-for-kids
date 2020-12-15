@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: ['plugin:react/recommended', 'prettier-standard', 'standard'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -16,7 +16,5 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react'],
-  rules: {
-    'space-before-function-paren': 0
-  }
+  rules: {}
 }

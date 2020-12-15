@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import React, { useState } from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import { GlobalStyle, Container } from "./styles";
-import mainTheme from "./theme";
+import { GlobalStyle, Container } from './styles'
+import mainTheme from './theme'
 
-import IntroScreen from "./IntroScreen";
-import App from "./App";
+import IntroScreen from './IntroScreen'
+import App from './App'
 
 const AbcForKids = () => {
-  const [started, setStarted] = useState(false);
+  const [started, setStarted] = useState(false)
 
   const startApp = () => {
-    setStarted(true);
-  };
+    setStarted(true)
+  }
 
   return (
     <ThemeProvider theme={mainTheme}>
@@ -24,7 +24,7 @@ const AbcForKids = () => {
         <GlobalStyle />
       </>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default AbcForKids;
+export default AbcForKids

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { darken, lighten } from "polished";
+import styled from 'styled-components'
+import { darken, lighten } from 'polished'
 
 export const Container = styled.div`
   ${({ theme }) => theme.mixins.flexAlign()}
@@ -12,14 +12,13 @@ export const Container = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
   }
-`;
+`
 
 export const LettersContainer = styled.div`
   ${({ theme }) => theme.mixins.flexAlign()}
   width: 100%;
   height: 100%;
   display: grid;
-  /*   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
   grid-gap: 0.6rem;
   grid-template-columns: 50px 50px 50px 50px 50px 50px;
   grid-template-rows: 50px 50px 50px 50px 50px;
@@ -32,32 +31,38 @@ export const LettersContainer = styled.div`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
-    width: 40%;
-    height: 40%;
+    width: 80%;
+    height: 100%;
+    grid-gap: 0.6rem;
+    grid-template-columns: repeat(13, minmax(80px, 1fr));
+    grid-template-rows: repeat(3, 80px);
   }
-`;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.largeDesktop}) {
+    width: 60%;
+  }
+`
 
 const basicButton = styled.button`
   ${({ theme }) => theme.mixins.flexAlign()}
   position: relative;
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 600;
   text-transform: uppercase;
-  text-shadow: 0px 1px 0px #ffffff;
-  color: ${({ theme }) => theme.colors.keyboardLetterTextColor};
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  color: ${({ theme }) => lighten(0.1, theme.colors.keyboardLetterTextColor)};
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => lighten(0.1, theme.colors.keyboardLetterBgColor)} 90%,
-    ${({ theme }) => darken(0.2, theme.colors.keyboardLetterBgColor)} 100%
+    ${({ theme }) => lighten(0.2, theme.colors.keyboardLetterBgColor)} 0%,
+    ${({ theme }) => theme.colors.keyboardLetterBgColor} 100%
   );
   background-color: ${({ theme }) => theme.colors.keyboardLetterBgColor};
+  border: none;
   border-radius: 0.4rem;
-  border: 1px solid
-    ${({ theme }) => darken(0.1, theme.colors.keyboardLetterBorderColor)};
-  box-shadow: inset 0px 2px 0px 0px
-    ${({ theme }) => lighten(0.3, theme.colors.keyboardLetterBorderColor)};
+  border-bottom: 4px solid
+    ${({ theme }) => darken(0.25, theme.colors.keyboardLetterBorderColor)};
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  outline: 0;
   transition: all 0.1s ease;
 
   &:active,
@@ -74,23 +79,22 @@ const basicButton = styled.button`
     font-weight: normal;
     margin-left: 0.4rem;
   }
-`;
+`
 
 export const LetterButton = styled(basicButton)`
   width: 50px;
   height: 50px;
 
-  &:nth-child(25) {
-    grid-column: 3;
-  }
-
-  &:nth-child(26) {
-    grid-column: 4;
-  }
-
   &.active {
     color: ${({ theme }) => theme.colors.keyboardLetterTextColorActive};
-    background: ${({ theme }) => theme.colors.keyboardLetterBgColorActive};
+    background: linear-gradient(
+      to bottom,
+      ${({ theme }) => lighten(0.2, theme.colors.keyboardLetterBgColorActive)}
+        0%,
+      ${({ theme }) => theme.colors.keyboardLetterBgColorActive} 100%
+    );
+    background-color: ${({ theme }) =>
+      theme.colors.keyboardLetterBgColorActive};
     border: 1px solid ${({ theme }) => theme.colors.keyboardLetterBgColorActive};
     box-shadow: none;
   }
@@ -110,22 +114,37 @@ export const LetterButton = styled(basicButton)`
     grid-column: 6;
     grid-row: 5;
   }
-`;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    width: 80px;
+    height: 80px;
+
+    &:nth-child(25),
+    &:nth-child(26) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+`
 
 export const PlayWordButton = styled(basicButton)`
   height: 50px;
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => lighten(0.1, theme.colors.keyboardWordBgColor)} 90%,
-    ${({ theme }) => darken(0.2, theme.colors.keyboardWordBgColor)} 100%
+    ${({ theme }) => lighten(0.2, theme.colors.keyboardWordBgColor)} 0%,
+    ${({ theme }) => theme.colors.keyboardWordBgColor} 100%
   );
   background-color: ${({ theme }) => theme.colors.keyboardWordBgColor};
-  border-radius: 0.4rem;
-  border: 1px solid ${({ theme }) => theme.colors.keyboardWordBorderColor};
-  box-shadow: inset 0px 2px 0px 0px
-    ${({ theme }) => lighten(0.2, theme.colors.keyboardWordBorderColor)};
+  border-bottom: 4px solid
+    ${({ theme }) => darken(0.15, theme.colors.keyboardWordBorderColor)};
   grid-column: 2 / span 4;
   grid-row: 5;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    height: 80px;
+    grid-column: 3 / span 9;
+    grid-row: auto;
+  }
 
   &:active,
   .active {
@@ -142,8 +161,8 @@ export const PlayWordButton = styled(basicButton)`
     border: none;
     box-shadow: none;
   }
-`;
+`
 
 export const Icon = styled.img`
   width: 20px;
-`;
+`
