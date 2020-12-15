@@ -31,10 +31,10 @@ export const LettersContainer = styled.div`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
-    width: 100%;
+    width: 80%;
     height: 100%;
     grid-gap: 0.6rem;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(13, minmax(80px, 1fr));
     grid-template-rows: repeat(3, 80px);
   }
 
@@ -139,6 +139,12 @@ export const PlayWordButton = styled(basicButton)`
     ${({ theme }) => darken(0.15, theme.colors.keyboardWordBorderColor)};
   grid-column: 2 / span 4;
   grid-row: 5;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    height: 80px;
+    grid-column: 3 / span 9;
+    grid-row: auto;
+  }
 
   &:active,
   .active {
