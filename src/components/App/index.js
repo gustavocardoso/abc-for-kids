@@ -53,15 +53,26 @@ const App = () => {
     }
   }, [selectedLetter])
 
-  const handleClickedButton = async (event) => {
-    const clickedLetter = event.target.innerText.toLowerCase()
+  const getRandomWord = (previousWord, clickedLetter) => {
     const filteredLetter = alphabet.filter(
       (letter) => letter.character === clickedLetter
     )
     const words = filteredLetter[0].words
-    const randomWord = words[Math.floor(Math.random() * words.length)].word
+    let randomWord
 
-    setSelectedLetter({ character: clickedLetter, word: randomWord })
+    do {
+      randomWord = words[Math.floor(Math.random() * words.length)].word
+    } while (previousWord === randomWord)
+
+    return randomWord
+  }
+
+  const handleClickedButton = async (event) => {
+    const previousWord = selectedLetter.word
+    const clickedLetter = event.target.innerText.toLowerCase()
+    const newWord = getRandomWord(previousWord, clickedLetter)
+
+    setSelectedLetter({ character: clickedLetter, word: newWord })
 
     await handlePlayLetterButton()
   }
