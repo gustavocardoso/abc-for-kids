@@ -131,12 +131,12 @@ export const PlayWordButton = styled(basicButton)`
   height: 50px;
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => lighten(0.2, theme.colors.keyboardLetterBgColorActive)} 0%,
-    ${({ theme }) => theme.colors.keyboardLetterBgColorActive} 100%
+    ${({ theme }) => lighten(0.2, theme.colors.keyboardWordBgColor)} 0%,
+    ${({ theme }) => theme.colors.keyboardWordBgColor} 100%
   );
-  background-color: ${({ theme }) => theme.colors.keyboardLetterBgColorActive};
+  background-color: ${({ theme }) => theme.colors.keyboardWordBgColor};
   border-bottom: 4px solid
-    ${({ theme }) => darken(0.15, theme.colors.keyboardLetterBgColorActive)};
+    ${({ theme }) => darken(0.15, theme.colors.keyboardWordBorderColor)};
   grid-column: 2 / span 4;
   grid-row: 5;
 

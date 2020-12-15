@@ -61,8 +61,8 @@ const mainTheme = {
     keyboardLetterTextColorActive: colorPalette.light,
     keyboardLetterBorderColor: colorPalette.light,
 
-    keyboardWordBgColor: colorPalette.danger,
-    keyboardWordBorderColor: colorPalette.danger,
+    keyboardWordBgColor: colorPalette.highlight,
+    keyboardWordBorderColor: colorPalette.highlight,
     keyboardWordBgColorActive: colorPalette.highlight,
     keyboardWordBgColorClick: colorPalette.highlight,
     keyboardWordTextColorActive: colorPalette.light,
