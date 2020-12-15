@@ -49,7 +49,7 @@ const basicButton = styled.button`
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   color: ${({ theme }) => lighten(0.1, theme.colors.keyboardLetterTextColor)};
   background: linear-gradient(
     to bottom,
@@ -131,12 +131,12 @@ export const PlayWordButton = styled(basicButton)`
   height: 50px;
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => lighten(0.2, theme.colors.keyboardWordBgColor)} 0%,
-    ${({ theme }) => theme.colors.keyboardWordBgColor} 100%
+    ${({ theme }) => lighten(0.2, theme.colors.keyboardLetterBgColorActive)} 0%,
+    ${({ theme }) => theme.colors.keyboardLetterBgColorActive} 100%
   );
-  background-color: ${({ theme }) => theme.colors.keyboardWordBgColor};
+  background-color: ${({ theme }) => theme.colors.keyboardLetterBgColorActive};
   border-bottom: 4px solid
-    ${({ theme }) => darken(0.15, theme.colors.keyboardWordBorderColor)};
+    ${({ theme }) => darken(0.15, theme.colors.keyboardLetterBgColorActive)};
   grid-column: 2 / span 4;
   grid-row: 5;
 
